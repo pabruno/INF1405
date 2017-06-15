@@ -15,7 +15,7 @@ import db.QuickStopDAO;
 import model.QuickStop;
 
 @WebServlet("/parada")
-public class QuickStopServlet extends HttpServlet{
+public class QuickStopConfirmServlet extends HttpServlet{
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		QuickStop q = new QuickStop();
 		String[] aircraftId;

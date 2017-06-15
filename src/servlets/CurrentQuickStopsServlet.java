@@ -14,7 +14,7 @@ import db.QuickStopDAO;
 import model.QuickStop;
 
 @WebServlet("/paradas_atuais")
-public class CurrentStopsServlet extends HttpServlet{
+public class CurrentQuickStopsServlet extends HttpServlet{
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		try {
 			ArrayList<QuickStop> stops = new QuickStopDAO().currentStops();

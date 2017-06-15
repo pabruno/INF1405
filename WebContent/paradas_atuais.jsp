@@ -13,6 +13,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/Hangar/css/style.css">
+<script text="text/javascript" src="/Hangar/js/paradas_atuais.js"></script>
 <title>Controle de Hangar - Paradas</title>
 </head>
 <body>
@@ -24,8 +25,9 @@
 		<table id="currentStopsTable" class="table table-striped">
 			<thead>
 				<tr>
-					<th>ID</th>
-					<th>Início</th>
+					<th>ID da Parada</th>
+					<th>Entrada</th>
+					<th>Saída</th>
 					<th>Vaga</th>
 					<th>ID Aeronave</th>
 					<th>Finalizar Parada</th>
@@ -36,9 +38,17 @@
 					<tr>
 						<td>${stops.id}</td>
 						<td><fmt:formatDate value="${stops.startDate}" pattern="dd/MM/yyyy HH:mm"/></td>
+						<c:choose>
+    						<c:when test="${empty stops.departureDate}">
+       							 <td></td>
+    						</c:when>
+    						<c:otherwise>
+        						<td><fmt:formatDate value="${stops.departureDate}" pattern="dd/MM/yyyy HH:mm"/></td>
+    						</c:otherwise>
+						</c:choose>
 						<td>${stops.placeId}</td>
 						<td>${stops.aircraftId}</td>
-						<td><button class='btn btn-default'><span class='glyphicon glyphicon-ok'></span></button></td>
+						<td><button class='btn btn-default' id='${stops.id}' onclick='finishQuickStop(this.id)'><span class='glyphicon glyphicon-ok'></span></button></td>
 					</tr>
 				</c:forEach>
 			</tbody>
