@@ -7,7 +7,7 @@
 			<li><a href="/Hangar/vagas">Vagas</a></li>
 			<li><a href="/Hangar/clientes">Clientes</a></li>
 			<li><a href="/Hangar/aeronaves">Aeronaves</a></li>
-			<li><a href="#">Page 3</a></li>
+			<li><a href="/Hangar/abastecimentos">Abastecimentos</a></li>
 		</ul>
 	</div>
 </nav>

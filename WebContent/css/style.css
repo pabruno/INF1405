@@ -1,5 +1,6 @@
 table#clientsTable th, table#clientsTable td,
 table#placesTable th, table#placesTable td,
-table#currentStopsTable th, table#currentStopsTable td {
+table#currentStopsTable th, table#currentStopsTable td,
+table#supplyTable th, table#supplyTable td {
 	text-align: center
 }
